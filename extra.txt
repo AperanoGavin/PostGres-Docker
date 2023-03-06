@@ -15,6 +15,16 @@ docker exec  -it e87c2bd1c33a  psql myusername -d mydatabase
 
    CREATE DATABASE mydatabase;
 
+//ajouter des colonnes a une table
+
+   ALTER TABLE mytablename ADD COLUMN mycolumn1 text;
+   remove column: ALTER TABLE mytablename DROP COLUMN mycolumn1;
+   edit column: ALTER TABLE mytablename ALTER COLUMN mycolumn1 TYPE text;
+
+//inserer des données dans une table
+
+   INSERT INTO mytablename (mycolumn1, mycolumn2) VALUES ('myvalue1', 'myvalue2');
+
 //supprimer une base de donnée
 
    DROP DATABASE mydatabase;
@@ -31,3 +41,7 @@ docker exec  -it e87c2bd1c33a  psql myusername -d mydatabase
 //faut utiliser sereal pour les tableaux et les objets
 
    CREATE TABLE mytablename (id serial PRIMARY KEY, mycolumn1 text, mycolumn2 text);
+
+//ALTER TABLE student  et mettre LOGIN en PRIMARY KEY
+
+   ALTER TABLE student ADD PRIMARY KEY (login);
