@@ -1,1 +1,30 @@
 docker exec  -it e87c2bd1c33a  psql myusername -d mydatabase
+
+//afficher les base de donnée 
+    \l
+//afficher les tables
+    \dt 
+//afficher les colonnes
+    \d [mytablename]
+
+//creer un utilisateur ou un role
+
+   CREATE ROLE myusername WITH LOGIN PASSWORD 'mypassword';
+
+//creer une base de donnée
+
+   CREATE DATABASE mydatabase;
+
+//supprimer une base de donnée
+
+   DROP DATABASE mydatabase;
+
+//supprimer un utilisateur ou un role
+
+   DROP ROLE myusername;
+
+//supprimer une table
+
+   DROP TABLE mytablename;   
+
+
