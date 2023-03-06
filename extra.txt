@@ -28,3 +28,6 @@ docker exec  -it e87c2bd1c33a  psql myusername -d mydatabase
    DROP TABLE mytablename;   
 
 
+//faut utiliser sereal pour les tableaux et les objets
+
+   CREATE TABLE mytablename (id serial PRIMARY KEY, mycolumn1 text, mycolumn2 text);
